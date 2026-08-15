@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aidan Byrnes</title>
+    <style>
+        @font-face {
+            font-family: Main;
+            src: url(../Montserrat-VariableFont_wght.ttf);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Main, monospace;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #background {
+            filter: blur(100px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .title-box {
+            /*border: 1px solid #ffffff;*/
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+        }
+
+        .title-box h1 {
+            font-size: 24px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        .header-box {
+            text-transform: uppercase;
+            border: 1px solid #ffffff;
+            text-align: center;
+            text-decoration: none;
+            color: #000000;
+            display: block;
+            transition: all 0.2s ease;
+            position: relative;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .connection {
+            width: 1px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, .5);
+            margin: 0 auto 0;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .link-node {
+            position: relative;
+        }
+
+        .link-box {
+            border-bottom: 1px solid #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            transition: all 0.2s ease;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+
+        .link-box:hover {
+            background-color: rgba(26, 26, 26, 0.9);
+        }
+
+        .link-box:active {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .link-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            opacity: 0.7;
+        }
+
+        .link-text {
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 600px) {
+            .title-box h1 {
+                font-size: 20px;
+            }
+            
+            .bio-box {
+                font-size: 14px;
+            }
+            
+            .link-text {
+                font-size: 14px;
+            }
+
+            .header-box {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="manifest" href="../icons/site.webmanifest">
+    <!-- MailerLite Universal -->
+    <!-- <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2118328');
+    </script> -->
+    <!-- End MailerLite Universal -->
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="title-box">
+                <h1>Aidan Byrnes</h1>
+                <div class="link-label">Audio Experience Designer & Programmer | Max/MSP | Electronic Artist</div>
+            </div>
+
+            <div class="links">
+                <div class="link-node">
+                    <a href="../" class="link-box" rel="noopener">
+                        <div class="link-text">Website - Home</div>
+                    </a>
+                </div>
+
+                <div class="link-node">
+                    <a href="https://slecm.org" class="link-box" rel="noopener">
+                        <div class="link-text">St. Louis Electronic, Computer Music</div>
+                    </a>
+                </div>
+
+                <div class="connection"></div>
+
+                <div class="header-box">
+                    <p>Software</p>
+                </div>
+
+                <div class="link-node">
+                    <a href="https://aidanbyrnes.gumroad.com/" class="link-box" rel="noopener">
+                        <div class="link-text">Max for Live</div>
+                    </a>
+                </div>
+
+                <div class="link-node">
+                    <a href="https://github.com/aidanbyrnes" class="link-box" rel="noopener">
+                        <div class="link-text">GitHub</div>
+                    </a>
+                </div>
+
+                <div class="connection"></div>
+
+                <div class="header-box">
+                    <p>Music</p>
+                </div>
+
+                <div class="link-node">
+                    <a href="https://open.spotify.com/artist/0D8aUMWATEeIrvMCrDg5eM" class="link-box" rel="noopener">
+                        <div class="link-text">Spotify</div>
+                    </a>
+                </div>
+
+                <div class="link-node">
+                    <a href="https://music.apple.com/us/artist/aidan-byrnes/1628927608" class="link-box" rel="noopener">
+                        <div class="link-text">Apple Music</div>
+                    </a>
+                </div>
+
+                <div class="link-node">
+                    <a href="https://aidanbyrnes.bandcamp.com/" class="link-box" rel="noopener">
+                        <div class="link-text">Bandcamp</div>
+                    </a>
+                </div>
+
+                <div class="connection"></div>
+
+                <div class="header-box">
+                    <p>Social / contact</p>
+                </div>
+
+                <div class="link-node">
+                    <a href="https://www.instagram.com/aidan.byrnes/" class="link-box" rel="noopener">
+                        <div class="link-text">Instagram</div>
+                    </a>
+                </div>
+
+                <div class="link-node">
+                    <a href="https://www.linkedin.com/in/aidanbyrnes/" class="link-box" rel="noopener">
+                        <div class="link-text">LinkedIn</div>
+                    </a>
+                </div>
+
+                <div class="link-node">
+                    <a href='mailto:"Aidan Byrnes"<contact@aidanbyrnes.net>' class="link-box" rel="noopener">
+                        <div class="link-text">contact@aidanbyrnes.net</div>
+                    </a>
+                </div>
+
+                <!--<div class="connection"></div>
+
+                <div class="header-box">
+                    <p>Newsletter</p>
+                </div>
+
+                <div class="ml-embedded" data-form="qbKxg0"></div>-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Aidan Byrnes</title>
+    <meta name="title" content="Aidan Byrnes - Audio Experience Designer & Programmer | Max/MSP | Electronic Artist">
+    <meta name="description" content="Multidisciplinary composer, producer, and programmer blending technology and musical expression.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aidanbyrnes.net/">
+    <meta property="og:title" content="Aidan Byrnes - Audio Experience Designer & Programmer | Max/MSP | Electronic Artist">
+    <meta property="og:description" content="Multidisciplinary composer, producer, and programmer blending technology and musical expression.">
+    <meta property="og:image" content="https://aidanbyrnes.net/pointcloud-banner.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aidanbyrnes.net/">
+    <meta property="twitter:title" content="Aidan Byrnes - Audio Experience Designer & Programmer | Max/MSP | Electronic Artist">
+    <meta property="twitter:description" content="Multidisciplinary composer, producer, and programmer blending technology and musical expression.">
+    <meta property="twitter:image" content="https://aidanbyrnes.net/pointcloud-banner.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://aidanbyrnes.net/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://aidanbyrnes.net/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://aidanbyrnes.net/icons/favicon-16x16.png">
+    <link rel="manifest" href="https://aidanbyrnes.net/icons/site.webmanifest">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="p5/sine.js"></script>-->
+    <script src="https://kit.fontawesome.com/b6075459c1.js" crossorigin="anonymous"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="name">
+            <div class="content">
+                <span id="name-span">Aidan Byrnes<span class="extra-bit"> - Audio Experience Designer & Programmer | Max/MSP | Electronic Artist</span></span>
+                <span id="mobile-menu">about</span>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="content">
+                <div><a href="https://aidanbyrnes.net/music/">music</a></div>
+                <div><a href="https://aidanbyrnes.net/visuals/">visuals</a></div>
+                <div><span id="about-span">about</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="vid-desc">
+        <div>
+            <div id="dots"></div>
+            <div id="vid-desc-text">
+                <!--where text lives-->
+            </div>
+            <!--where transport lives-->
+        </div>
+        <hr>
+    </div>
+
+    <div id="about-container" style="display: none;">
+        <div class="crop">
+            <img style="margin-left: 0;" src="bio_img/max_live.jpg" alt="photo of live performance">
+        </div>
+        <p>
+            Multidisciplinary composer, producer, and programmer blending technology and musical expression. Experienced in scoring for multimedia with a strong foundation in audio DSP, live sound, and software development. Skilled in Max/MSP, Pure Data, and C++, with a keen interest in experimental sound design and developing custom instruments. Contributing innovative audio solutions in media, interactive, and research-driven environments.
+        </p>
+        <p>
+            Creating emotional, detailed soundscapes and immersive audio experiences, with a portfolio of original music spanning film, dance, theater, and interactive installations. Blending drones, pulsing rhythms, spectral techniques, and aleatoric elements, combining organic spontaneity with careful arrangement.
+        </p>
+    </div>
+
+    <div id="mute-msg"><i class="fa-solid fa-volume-xmark" style="display:none;"></i></div>
+
+    <div id="footer">
+        <a href="https://open.spotify.com/artist/0D8aUMWATEeIrvMCrDg5eM"><i class="fa-brands fa-spotify fa-xl"></i></a>
+        &emsp;|&emsp;
+        <a href="https://music.apple.com/us/artist/aidan-byrnes/1628927608"><i class="fa-brands fa-itunes-note fa-xl"></i></a>
+        &emsp;|&emsp;
+        <a href="https://aidanbyrnes.bandcamp.com/"><i class="fa-brands fa-bandcamp fa-xl"></i></a>
+        &emsp;|&emsp;
+        <a href="https://www.instagram.com/aidan.byrnes/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        &emsp;|&emsp;
+        <a href="https://www.linkedin.com/in/aidanbyrnes/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        &emsp;|&emsp;
+        <a href='mailto:"Aidan Byrnes"<contact@aidanbyrnes.net>'><div id="desktop-email">contact@aidanbyrnes.net</div><i id="mobile-email" class="fa-regular fa-envelope fa-xl"></i></a>
+    </div>
+
+    <div id="canvas-clip">
+        <div id="loader-container"><div class="loader"></div></div>
+        <video id="videoPlayer" poster="data:image/gif,AAAA" autoplay muted playsinline>
+            <source src="" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        let videos = [
+            {
+                "title": "Wireless pose tracking in Max/MSP",
+                "src": "limb_test.mp4",
+                "vol": 0.25,
+                "cover": false
+            },
+            {
+                "title": "Spatial tracking in Max/MSP",
+                "src": "MAX_01.mp4",
+                "vol": 0.25,
+                "cover": false
+            },
+            {
+                "title": '"Love You, Charlie" - generative percussion in plugdata',
+                "desc": "from <i>Gambling Man</i><br>Dir. by J.P. Killian",
+                "src": "GM_1.mp4"
+            },
+            {
+                "title": '"Intro"',
+                "desc": "from <i>MERIDIAN</i><br>Dir. by Nathan White",
+                "src": "MRDN_0.mp4"
+            },
+            {
+                "title": '"Short Circuit"',
+                "desc": "from <i>MERIDIAN</i><br>Dir. by Nathan White",
+                "src": "MRDN_3.mp4"
+            }
+        ];
+    </script>
+    <script src="home.js"></script>
+</body>
+</html>
